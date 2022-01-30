@@ -18,7 +18,7 @@ var pub_key *big.Int
 var pub_shared_priv *big.Int
 
 func SendPublicNumbers(conn net.Conn) {
-	p, err := rand.Prime(rand.Reader, 16)
+	p, err := rand.Prime(rand.Reader, 32)
 	if err != nil {
 		fmt.Println("Error while generating public p: ", err.Error())
 	}
